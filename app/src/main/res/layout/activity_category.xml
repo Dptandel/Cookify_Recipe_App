@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SearchActivity">
+    android:background="@color/background"
+    tools:context=".CategoryActivity">
 
     <ImageView
         android:id="@+id/img_back_btn"
@@ -15,38 +16,34 @@
         android:layout_marginTop="24dp"
         android:background="@drawable/card_back_btn"
         android:padding="5dp"
+        android:foregroundGravity="center"
         android:src="@drawable/back_icon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/search"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/search_bg"
-        android:fontFamily="@font/poppins_light"
-        android:hint="Search for Recipes"
-        android:inputType="textFilter"
-        android:padding="16dp"
-        android:textColorHint="#5A5858"
-        android:textSize="17sp"
+    <TextView
+        android:id="@+id/tv_category_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:text="Salad"
+        android:textSize="22sp"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/img_back_btn"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.11"
         app:layout_constraintStart_toEndOf="@+id/img_back_btn"
         app:layout_constraintTop_toTopOf="@+id/img_back_btn" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewSearch"
-        android:layout_width="match_parent"
+        android:id="@+id/recyclerViewCategory"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginHorizontal="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search"
-        tools:listitem="@layout/search_item" />
-
+        app:layout_constraintTop_toBottomOf="@+id/tv_category_name" />
 </androidx.constraintlayout.widget.ConstraintLayout>

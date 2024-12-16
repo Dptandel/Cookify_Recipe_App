@@ -15,6 +15,12 @@
         android:theme="@style/Theme.CookifyRecipeApp"
         tools:targetApi="31">
         <activity
+            android:name=".RecipeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CategoryActivity"
+            android:exported="false" />
+        <activity
             android:name=".SearchActivity"
             android:exported="false" />
         <activity
